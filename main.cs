@@ -12,7 +12,7 @@ class Program
         // This program guesses the correct number
         int guess;
         Random randomNumber = new Random();
-        int number = randomNumber.Next(1, 6);
+        int generatedNumber = randomNumber.Next(1, 6);
       
         // input 
         Console.WriteLine("This program guesses a number between 1-6");
@@ -21,14 +21,14 @@ class Program
         Console.Write("Input a number between 1-6: ");
         guess = Convert.ToInt32(Console.ReadLine());
 
-        // process
+        // process and output
         Console.WriteLine("");
-        if (guess == number)
+        if (guess == generatedNumber)
         {
             Console.WriteLine("You are correct!");
         }
 
-        if (guess != number)
+        if (guess != generatedNumber)
         {
             Console.WriteLine("You are incorrect!");
         }
